@@ -1,6 +1,6 @@
 # Publishing Checklist
 
-`@livetoon/lipsync-wasm` を npm に public 公開するための実運用チェックリストです。
+`@mogami/lipsync-wasm` を npm に public 公開するための実運用チェックリストです。
 
 ## 0. 前提
 
@@ -57,8 +57,8 @@ npm publish
 ## 5. 公開後確認
 
 ```bash
-npm view @livetoon/lipsync-wasm version
-npm view @livetoon/lipsync-wasm dist-tags
+npm view @mogami/lipsync-wasm version
+npm view @mogami/lipsync-wasm dist-tags
 ```
 
 必要に応じてクリーン環境で導入確認:
@@ -66,6 +66,6 @@ npm view @livetoon/lipsync-wasm dist-tags
 ```bash
 mkdir -p /tmp/lipsync-wasm-smoke && cd /tmp/lipsync-wasm-smoke
 npm init -y
-npm install @livetoon/lipsync-wasm
-node -e "import('@livetoon/lipsync-wasm').then(() => console.log('ok'))"
+npm install @mogami/lipsync-wasm
+node -e "import('@mogami/lipsync-wasm').then(() => console.log('ok'))"
 ```

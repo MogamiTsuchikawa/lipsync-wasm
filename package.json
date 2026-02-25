@@ -1,16 +1,16 @@
 {
-  "name": "@livetoon/lipsync-wasm",
+  "name": "@mogami/lipsync-wasm",
   "version": "0.1.1",
   "description": "Reusable lip sync track computation package powered by Rust and WebAssembly",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/livetoon/lipsync-wasm.git"
+    "url": "git+https://github.com/MogamiTsuchikawa/lipsync-wasm.git"
   },
   "bugs": {
-    "url": "https://github.com/livetoon/lipsync-wasm/issues"
+    "url": "https://github.com/MogamiTsuchikawa/lipsync-wasm/issues"
   },
-  "homepage": "https://github.com/livetoon/lipsync-wasm#readme",
+  "homepage": "https://github.com/MogamiTsuchikawa/lipsync-wasm#readme",
   "keywords": [
     "lipsync",
     "wasm",
