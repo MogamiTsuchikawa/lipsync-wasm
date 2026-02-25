@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { computeTrackFromWavBase64, createLipSyncSmoother, initLipSync, sampleTrack } from "@mogami/lipsync-wasm";
-import lipsyncWasmUrl from "@mogami/lipsync-wasm/wasm/lipsync_wasm_bg.wasm?url";
+import { computeTrackFromWavBase64, createLipSyncSmoother, initLipSync, sampleTrack } from "@mogamitsuchikawa/lipsync-wasm";
+import lipsyncWasmUrl from "@mogamitsuchikawa/lipsync-wasm/wasm/lipsync_wasm_bg.wasm?url";
 import { encodePcmAsWavBase64, joinChunks } from "./audio";
 import { VrmScene } from "./vrmScene";
 
