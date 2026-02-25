@@ -1,0 +1,65 @@
+{
+  "name": "@livetoon/lipsync-wasm",
+  "version": "0.1.0",
+  "description": "Reusable lip sync track computation package powered by Rust and WebAssembly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livetoon/lipsync-wasm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/livetoon/lipsync-wasm/issues"
+  },
+  "homepage": "https://github.com/livetoon/lipsync-wasm#readme",
+  "keywords": [
+    "lipsync",
+    "wasm",
+    "webassembly",
+    "rust",
+    "vrm",
+    "audio"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./wasm/lipsync_wasm_bg.wasm": "./wasm/lipsync_wasm_bg.wasm"
+  },
+  "files": [
+    "dist",
+    "wasm",
+    "rust/src",
+    "rust/Cargo.toml",
+    "rust/Cargo.lock",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run ensure:wasm && npm run build:ts",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "build:wasm": "bash ./scripts/build-wasm.sh",
+    "rebuild:wasm": "npm run build:wasm",
+    "check:wasm": "bash ./scripts/build-wasm.sh --check",
+    "ensure:wasm": "bash ./scripts/build-wasm.sh --ensure",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run check:wasm && npm run typecheck && npm run build && npm run example:vrm-mic:build",
+    "publish:check": "npm pack --dry-run",
+    "example:vrm-mic:install": "npm --prefix ./examples/vrm-mic install",
+    "example:vrm-mic": "npm --prefix ./examples/vrm-mic run dev",
+    "example:vrm-mic:build": "npm --prefix ./examples/vrm-mic run build",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

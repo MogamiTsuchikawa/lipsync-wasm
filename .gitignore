@@ -1,0 +1,9 @@
+node_modules/
+dist/
+examples/*/dist/
+rust/target/
+
+*.tsbuildinfo
+*.tgz
+
+.DS_Store
