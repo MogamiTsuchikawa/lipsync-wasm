@@ -1,5 +1,5 @@
 {
-  "name": "@mogami/lipsync-wasm",
+  "name": "@mogamitsuchikawa/lipsync-wasm",
   "version": "0.1.1",
   "description": "Reusable lip sync track computation package powered by Rust and WebAssembly",
   "license": "MIT",
